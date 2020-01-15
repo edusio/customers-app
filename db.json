@@ -1,0 +1,19 @@
+{
+  "customers": [
+    {
+        "dni": "01234567",
+        "name": "Eduardo Lop",
+        "age": 29
+    },
+    {
+        "dni": "32587452",
+        "name": "Pepe San",
+        "age": 22
+    },
+    {
+        "dni": "91321482",
+        "name": "Juan Mart",
+        "age": 51
+    }
+  ]
+}
