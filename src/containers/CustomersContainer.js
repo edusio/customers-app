@@ -12,7 +12,7 @@ import { getCustomers } from '../selectors/customers';
 class CustomersContainer extends Component {
     
     componentDidMount() {
-        if(this.props.customers.length == 0) {
+        if(this.props.customers.length === 0) {
             this.props.fetchCustomers();
         }
     }
