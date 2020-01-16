@@ -1,28 +1,22 @@
 {
   "customers": [
     {
-      "name": "Eduardo Lopez",
-      "dni": "02298088A",
-      "age": "29",
+      "name": "Eduardo Lop",
+      "dni": "02232581K",
+      "age": 29,
       "id": 1
     },
     {
-      "name": "Pepe Sanch",
-      "age": "21",
-      "dni": "02345123",
+      "name": "Raquel Saez",
+      "dni": "983641290W",
+      "age": 45,
       "id": 2
     },
     {
-      "name": "Julian Rod",
-      "age": "41",
-      "dni": "98234123L",
+      "name": "Tania Riv",
+      "dni": "62187587L",
+      "age": 28,
       "id": 3
     },
-    {
-      "name": "Jorg Sanch",
-      "dni": "0123213123",
-      "age": "44",
-      "id": 4
-    }
   ]
 }

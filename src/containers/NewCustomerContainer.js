@@ -9,25 +9,18 @@ import createCustomer from '../actions/createCustomer';
 
 class NewCustomerContainer extends Component {
     
-    handleSubmit = (values) => {
-        this.props.createCustomer(values);
-    };
+    handleSubmit = (values) => this.props.createCustomer(values);
 
-    handleOnBack = () => {
-        this.props.history.goBack();
-    };
+    handleOnBack = () => this.props.history.goBack();
 
-    handleOnSubmitSusccess = () => {
-        this.props.history.goBack();
-    };
+    handleOnSubmitSusccess = () => this.props.history.goBack();
 
-    renderBody = () => {
-        return <CustomerEdit
+    renderBody = () => 
+        <CustomerEdit
                     onSubmit={this.handleSubmit}
                     onSubmitSuccess={this.handleOnSubmitSusccess}
                     onBack={this.handleOnBack}
-                />
-    };
+        />
 
     render() {
         return (

@@ -10,15 +10,15 @@ const isRequired = (value) => (
   !value && ' Este campo es requerido'
 );
 
-const isNumber = (value) => (
-  isNaN(Number(value)) && 'El campo debe ser un número'
-);
+const isNumber = (value) => isNaN(Number(value)) && 'El campo debe ser un número';
 
 const validate = (values) => {
   const error = { };
 
   return error;
 };
+
+const toNumber = (value) => value && parseInt(value);
 
 // TO-Do Refactor a generic component
 const MyField = ({
@@ -58,12 +58,13 @@ const CustomerEdit = ({ handleSubmit, submitting, onBack }) => (
         component={MyField}
         type="number"
         validate={[isNumber]}
+        parse={toNumber}
         label="Edad"
       />
       <CustomersAction>
         <div>
           <button type="submit" disabled={submitting}>Aceptar</button>
-          <button onClick={onBack}>Cancelar</button>
+          <button type="button" onClick={onBack}>Cancelar</button>
         </div>
       </CustomersAction>
     </form>

@@ -12,4 +12,4 @@ export const apiPost = (url, obj) => () => fetch(`${url}`,
     method: 'POST',
     body: JSON.stringify(obj),
     headers: new Headers({ 'Content-type': 'application/json' }),
-  }).then();
+  }).then((v) => v.json());
