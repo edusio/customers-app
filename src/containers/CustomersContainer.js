@@ -12,7 +12,6 @@ import { getCustomers } from '../selectors/customers';
 class CustomersContainer extends Component {
     
     componentDidMount() {
-        debugger;
         this.props.fetchCustomers();
     }
 
