@@ -1,3 +1,5 @@
 const urlBase = 'http://localhost:3001/';
 
-export const urlCustomers = `${urlBase}customers`;
+const urlCustomers = `${urlBase}customers`;
+
+export default urlCustomers;

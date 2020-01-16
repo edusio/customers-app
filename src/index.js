@@ -10,9 +10,9 @@ import * as serviceWorker from './serviceWorker';
 
 
 const rootComponent = (
-    <Provider store={store}>
-        <App />
-    </Provider>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 ReactDOM.render(rootComponent, document.getElementById('root'));
