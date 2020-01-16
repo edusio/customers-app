@@ -15,10 +15,15 @@ class CustomerContainer extends Component {
     handleSubmit = (values) => {
         console.log(JSON.stringify(values));
         const { id } = values;
-        this.props.updateCustomer(id, values);
+        //hacemos el return para que funcione el submitting de customerEdit.js
+        return this.props.updateCustomer(id, values);
     };
 
     handleOnBack = () => {
+        this.props.history.goBack();
+    };
+
+    handleOnSubmitSusccess = () => {
         this.props.history.goBack();
     };
 
@@ -27,6 +32,7 @@ class CustomerContainer extends Component {
             const CustomerControl = match ? CustomerEdit : CustomerData;
             return <CustomerControl {...this.props.customer} 
                         onSubmit={this.handleSubmit}
+                        onSubmitSuccess={this.handleOnSubmitSusccess}
                         onBack={this.handleOnBack}
                     />
         }}/>

@@ -1,22 +1,22 @@
 {
   "customers": [
     {
-      "id": "01234567",
-      "dni": "01234567",
-      "name": "Test de cambio",
-      "age": 29
+      "name": "Eduardo Lopez",
+      "dni": "02298088A",
+      "age": "29",
+      "id": 1
     },
     {
-      "id": "32587452",
-      "dni": "32587452",
-      "name": "Pepe San",
-      "age": 22
+      "name": "Pepe Sanch",
+      "age": "21",
+      "dni": "02345123",
+      "id": 2
     },
     {
-      "id": "91321482",
-      "dni": "91321482",
-      "name": "Juan Mart",
-      "age": 51
+      "name": "Julian Rod",
+      "age": "41",
+      "dni": "98234123L",
+      "id": 3
     }
   ]
 }
