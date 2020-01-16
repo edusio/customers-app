@@ -7,8 +7,8 @@ import AppFrame from './../components/AppFrame';
 import { getCustomerDni } from '../selectors/customers';
 import CustomerEdit from '../components/CustomerEdit';
 import CustomerData from '../components/CustomerData';
-import { fetchCustomers} from './../actions/fetchCustomers';
-import { updateCustomer } from '../actions/updateCustomer';
+import fetchCustomers from './../actions/fetchCustomers';
+import updateCustomer from '../actions/updateCustomer';
 
 class CustomerContainer extends Component {
     

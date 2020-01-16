@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import AppFrame from './../components/AppFrame';
 import CustomerEdit from '../components/CustomerEdit';
-import { createCustomer } from '../actions/createCustomer';
+import createCustomer from '../actions/createCustomer';
 
 class NewCustomerContainer extends Component {
     

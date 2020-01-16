@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 import { connect} from 'react-redux';
 
-import { fetchCustomers} from './../actions/fetchCustomers';
+import fetchCustomers from './../actions/fetchCustomers';
 import AppFrame from './../components/AppFrame';
 import CustomerList from './../components/CustomerList';
 import CustomersAction from '../components/CustomersAction';
