@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { FETCH_CUSTOMERS, CREATE_CUSTOMER, UPDATE_CUSTOMERS } from '../constants';
+import { FETCH_CUSTOMERS, CREATE_CUSTOMER, UPDATE_CUSTOMERS, DELETE_CUSTOMER } from '../constants';
 
 // TODO se pueden poner mas de una actions
 export const customers = handleActions({
@@ -11,7 +11,7 @@ export const customers = handleActions({
     const id = customerPayload.id;
     const customers = state;
     const initialvalue = [];
-    
+
     const newCustomers = customers.reduce((acumulado, customer) => {
       if(customer.id === id) {
           return [...acumulado, customerPayload];
@@ -22,5 +22,6 @@ export const customers = handleActions({
     }, initialvalue);
 
     return newCustomers;
-  }
+  },
+  [DELETE_CUSTOMER]: (state, action) => state.filter(c => c.id !== action.payload),
 }, []);

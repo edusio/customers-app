@@ -13,3 +13,9 @@ export const apiPost = (url, obj) => () => fetch(`${url}`,
     body: JSON.stringify(obj),
     headers: new Headers({ 'Content-type': 'application/json' }),
   }).then((v) => v.json());
+
+  export const apiDelete = (url, id) => () => fetch(`${url}/${id}`,
+    {
+      method: 'DELETE',
+      headers: new Headers({ 'Content-type': 'application/json'}),
+    }).then(() => id);

@@ -1,28 +1,10 @@
 {
   "customers": [
     {
-      "name": "Eduardo Lopez",
-      "dni": "02232581K",
-      "age": 29,
-      "id": 1
-    },
-    {
-      "name": "Raquel Saez",
-      "dni": "983641290W",
-      "age": 45,
-      "id": 2
-    },
-    {
-      "name": "Tania Riv",
-      "dni": "62187587L",
-      "age": 28,
-      "id": 3
-    },
-    {
       "name": "Test de cambio0",
-      "dni": "123123",
-      "age": 2,
-      "id": 4
+      "dni": "01234567",
+      "age": 42,
+      "id": 1
     }
   ]
 }
