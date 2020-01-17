@@ -1,10 +1,22 @@
 {
   "customers": [
     {
-      "name": "Test de cambio0",
-      "dni": "01234567",
+      "name": "Jose Oure",
+      "dni": "01234567w",
       "age": 42,
       "id": 1
+    },
+    {
+      "name": "Lorena Ruiz",
+      "dni": "92345612K",
+      "age": 42,
+      "id": 2
+    },
+    {
+      "name": "Nicola River",
+      "dni": "2351234Q",
+      "age": 29,
+      "id": 3
     }
   ]
 }

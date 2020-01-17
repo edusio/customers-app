@@ -29,8 +29,9 @@ const MyField = ({
       {label}
       {' '}
     </label>
-    <input {...input} type={type} />
-    { meta.touched && meta.error && <span>{ meta.error }</span> }
+    <input {...input} className="form-control" type={type} />
+    { meta.touched && meta.error && <div className="alert alert-danger" role="alert">{ meta.error }</div>}
+    <br/>
   </div>
 );
 
@@ -38,36 +39,37 @@ const MyField = ({
 const CustomerEdit = ({ handleSubmit, submitting, onBack }) => (
   <div>
     <h2>Edición cliente</h2>
-    <form onSubmit={handleSubmit}>
-      <Field
-        name="name"
-        component={MyField}
-        type="text"
-
-        label="Nombre"
-      />
-      <Field
-        name="dni"
-        component={MyField}
-        type="text"
-        validate={isRequired}
-        label="Dni"
-      />
-      <Field
-        name="age"
-        component={MyField}
-        type="number"
-        validate={[isNumber]}
-        parse={toNumber}
-        label="Edad"
-      />
-      <CustomersAction>
-        <div>
-          <button type="submit" disabled={submitting}>Aceptar</button>
-          <button type="button" onClick={onBack}>Cancelar</button>
-        </div>
-      </CustomersAction>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <Field
+            name="name"
+            component={MyField}
+            type="text"
+            label="Nombre"
+          />
+          <Field
+            name="dni"
+            component={MyField}
+            type="text"
+            validate={isRequired}
+            label="Dni"
+          />
+          <Field
+            name="age"
+            component={MyField}
+            type="number"
+            validate={[isNumber]}
+            parse={toNumber}
+            label="Edad"
+          />
+          <CustomersAction>
+            <div>
+              <button type="submit" disabled={submitting} className="btn btn-primary">Aceptar</button>
+              <button type="button" onClick={onBack} className="btn btn-secondary">Cancelar</button>
+            </div>
+          </CustomersAction>
+          </div>
+      </form>
   </div>
 );
 

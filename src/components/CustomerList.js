@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import CustomerListItem from './CustomerListItem';
 
 const CustomerList = ({ customers, urlPath }) => (
-  <div>
-    <div className="customers-list">
+  <div className="col-12">
+    
+    <div className="customers-list ">
       {
                     customers.map((customer) => (
                       <CustomerListItem

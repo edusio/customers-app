@@ -21,8 +21,8 @@ const CustomerData = ({
         <i>{age}</i>
       </div>
       <CustomersAction>
-        <button onClick={onBack}>Volver</button>
-        {isDeleteAllow && <button onClick={() => onDelete(id)}>Eliminar</button>}
+        <button type="button" className="btn btn-secondary"onClick={onBack}>Volver</button>
+        {isDeleteAllow && <button onClick={() => onDelete(id)} type="button" className="btn btn-danger">Eliminar</button>}
       </CustomersAction>
     </div>
   </div>
