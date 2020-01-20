@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Is a App with customers, you see a Login (you need to have a allowed user).
+
+You can add, edit or delete a customer.
+
 ## Available Scripts
 
 You need ' json-server' installed globaly
