@@ -4,19 +4,42 @@
       "name": "Jose Oure",
       "dni": "01234567w",
       "age": 42,
-      "id": 1
+      "id": 1,
+      "isDeleteAllow": false
     },
     {
       "name": "Lorena Ruiz",
       "dni": "92345612K",
       "age": 42,
-      "id": 2
+      "id": 2,
+      "isDeleteAllow": false
     },
     {
       "name": "Nicola River",
       "dni": "2351234Q",
-      "age": 29,
-      "id": 3
+      "age": 33,
+      "id": 3,
+      "isDeleteAllow": false
+    },
+    {
+      "name": "Eduardo Lopez",
+      "dni": "01234567",
+      "age": 7,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "name": "User1",
+      "pass": "123",
+      "permissions": ["CUSTOMER_EDIT", "CUSTOMER_LIST", "CUSTOMER_VIEW"],
+      "id": 1
+    },
+    {
+      "name": "User2",
+      "pass": "123",
+      "permissions": [],
+      "id": 2
     }
   ]
 }

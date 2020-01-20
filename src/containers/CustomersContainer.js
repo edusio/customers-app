@@ -8,6 +8,8 @@ import AppFrame from './../components/AppFrame';
 import CustomerList from './../components/CustomerList';
 import CustomersAction from '../components/CustomersAction';
 import { getCustomers } from '../selectors/customers';
+import { accessControl } from '../helpers/accessControl';
+import { CUSTOMER_LIST, CUSTOMER_VIEW } from '../constants/permission';
 
 class CustomersContainer extends Component {
     
@@ -21,11 +23,12 @@ class CustomersContainer extends Component {
         this.props.history.push('customers/new');
     }
 
-    renderBody = (customers) => (
+    renderBody = (customers, user) => (
         <div>
             <CustomerList 
                 customers={customers} 
                 urlPath={'customers/'}
+                user
             />
             <CustomersAction>
                 <button onClick={this.handleAddNew} type="button" className ="btn btn-primary">Nuevo Cliente</button>
@@ -49,6 +52,7 @@ class CustomersContainer extends Component {
 CustomersContainer.propTypes = {
     fetchCustomers: PropTypes.func.isRequired,
     customers: PropTypes.array.isRequired,
+    customers: PropTypes.array.isRequired,
 };
 
 CustomersContainer.defaultProps = {
@@ -56,7 +60,8 @@ CustomersContainer.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    customers: getCustomers(state)
+    customers: getCustomers(state),
+    user: state.user
 });
 
-export default withRouter(connect(mapStateToProps, { fetchCustomers })(CustomersContainer));
+export default withRouter(connect(mapStateToProps, { fetchCustomers })(accessControl([CUSTOMER_LIST, CUSTOMER_VIEW])(CustomersContainer)));

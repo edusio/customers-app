@@ -4,6 +4,9 @@ import { reduxForm, Field } from 'redux-form';
 import { setPropsAsInitial } from '../helpers/setPropsAsInitial';
 
 import CustomersAction from './CustomersAction';
+import { accessControl } from '../helpers/accessControl';
+import { CUSTOMER_EDIT } from '../constants/permission';
+import { MyField } from './generic/MyField';
 
 // TODO refactor in utils/validators.js
 const isRequired = (value) => (
@@ -19,21 +22,6 @@ const validate = (values) => {
 };
 
 const toNumber = (value) => value && parseInt(value);
-
-// TO-Do Refactor a generic component
-const MyField = ({
-  input, meta, type = 'text', label, name,
-}) => (
-  <div>
-    <label htmlFor={name}>
-      {label}
-      {' '}
-    </label>
-    <input {...input} className="form-control" type={type} />
-    { meta.touched && meta.error && <div className="alert alert-danger" role="alert">{ meta.error }</div>}
-    <br/>
-  </div>
-);
 
 // submitting y handleSubmit vienen de redux-form
 const CustomerEdit = ({ handleSubmit, submitting, onBack }) => (
@@ -87,4 +75,4 @@ const CustomerEditForm = reduxForm(
   },
 )(CustomerEdit);
 
-export default setPropsAsInitial(CustomerEditForm);
+export default accessControl([CUSTOMER_EDIT])(setPropsAsInitial(CustomerEditForm));

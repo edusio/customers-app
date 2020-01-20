@@ -5,3 +5,7 @@ export const UPDATE_CUSTOMERS = 'UPDATE_CUSTOMERS';
 export const CREATE_CUSTOMER = 'CREATE_CUSTOMER';
 
 export const DELETE_CUSTOMER = 'DELETE_CUSTOMER';
+
+export const FETCH_USERS = 'FETCH_USERS';
+
+export const FETCH_USER = 'FETCH_USER';

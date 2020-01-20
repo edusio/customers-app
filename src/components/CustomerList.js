@@ -25,6 +25,7 @@ const CustomerList = ({ customers, urlPath }) => (
 CustomerList.propTypes = {
   customers: PropTypes.array.isRequired,
   urlPath: PropTypes.string.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 export default CustomerList;
