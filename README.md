@@ -13,7 +13,7 @@ $ npm run server
 Its a project with React - Redux - Redux-Form - Redux-Actions - Json-server
 
 ## Users
-See db.json to find  the users.
+See [db.json](https://github.com/edusio/customers-app/blob/master/db.json) to find  the users.
 ```
     -User1 has all permission, allowed to do all the actions
     -User2 has no permission, you will see a message "no tiene permisos de acceso"
